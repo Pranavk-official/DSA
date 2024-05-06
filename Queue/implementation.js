@@ -12,46 +12,89 @@
  * - print() : print all the items in the queue
  */
 
+// Queue implementation using Built-in JavaScript Array
+// class Queue {
+//     constructor() {
+//         this.items = []
+//     }
+
+//     enqueue(item) {
+//         this.items.push(item)
+//         // .push() adds an element to the end of the array
+//     }
+
+//     dequeue() {
+//         this.items.shift()
+//         // .shift() removes and returns the first element of the array
+//     }
+
+//     isEmpty() {
+//         if(this.items.length === 0) {
+//             return true
+//         }
+//         return false
+//     }
+
+//     peek() {
+//         if (!this.isEmpty()) {
+//             return this.items[0]
+//         }
+
+//         return null
+//     }
+
+//     size() {
+//         return this.items.length
+//     }
+
+//     print() {
+//         for (let i = 0; i < this.items.length; i++) {
+//             console.log(this.items[i]);
+//         }
+//     }
+// }
+
+// Queue implementation using Objects
+
 class Queue {
+
     constructor() {
-        this.items = []
+        this.items = {}
+        this.rear = 0
+        this.front = 0
     }
 
     enqueue(item) {
-        this.items.push(item)
-        // .push() adds an element to the end of the array
+        this.items[this.rear] = item
+        this.rear++
     }
 
     dequeue() {
-        this.items.shift()
-        // .shift() removes and returns the first element of the array
+        const item = this.items[this.front]
+        delete this.items[this.front]
+        this.front++
+        return item
     }
 
     isEmpty() {
-        if(this.items.length === 0) {
-            return true
-        }
-        return false
+        return this.rear - this.front === 0
     }
 
     peek() {
-        if (!this.isEmpty()) {
-            return this.items[0]
-        }
-
-        return null
+        return this.items[this.front]
     }
 
     size() {
-        return this.items.length
+        return this.rear - this.front
     }
 
     print() {
-        for (let i = 0; i < this.items.length; i++) {
+        for (let i = this.front; i < this.rear; i++) {
             console.log(this.items[i]);
         }
     }
 }
+
 
 const queue = new Queue()
 
@@ -63,8 +106,12 @@ queue.enqueue(50)
 
 console.log(queue.size());
 console.log('\n')
+console.log(queue.peek());
+console.log('\n')
 queue.print()
 
 queue.dequeue()
+console.log('\n')
+console.log(queue.peek());
 console.log('\n')
 queue.print()
