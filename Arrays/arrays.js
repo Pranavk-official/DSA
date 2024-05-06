@@ -115,6 +115,10 @@ console.log(highestFreqElem(arr));
 
 // TODO: find the kth largest element in an array;
 
+const kthLargest = (arr, k) => {
+    
+}
+
 // TODO: missing number in consecutive integers
 
 // TODO: find the element which greater than or equal to all the elements to its right side
