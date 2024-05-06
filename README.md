@@ -1,6 +1,5 @@
 # DSA - JavaScript
 
----
 
 This is a JavaScript based implementation of all the Data Structures and Algorithms.
 
