@@ -135,6 +135,45 @@ class DoublyLinkedList {
             this.size++
         }
     }
+
+    /**
+     * Inserts a new node with the provided data after the node containing the specified value.
+     *
+     * @param {any} data - The data for the new node.
+     * @param {any} x - The value after which the new node will be inserted.
+     * @return {void} This function does not return anything.
+     */
+    insertAfter(data,x){
+        if(this.isEmpty()) {
+            return null
+        }
+
+        let newNode = new Node(data)
+        let prev = this.head
+        
+        while(prev && prev.data !== x){
+            prev = prev.next
+        }
+
+        newNode.next = prev.next
+        prev.next.prev = newNode
+
+        prev.next = newNode
+        newNode.prev = prev
+
+        this.size++
+    }
+    
+
+
+    insertBefore(data, x) {
+        if(this.isEmpty()){
+            return null
+        }
+
+        
+    }
+
     
     /**
      * Displays the elements of the linked list.
@@ -175,21 +214,24 @@ class DoublyLinkedList {
 }
 
 
-module.exports = DoublyLinkedList
+// module.exports = DoublyLinkedList
 
-// const dll = new DoublyLinkedList()
+const dll = new DoublyLinkedList()
 
-// dll.prepend(10)
-// dll.prepend(20)
-// dll.prepend(30)
-// dll.append(35)
-// dll.append(45)
-// dll.append(55)
+dll.prepend(10)
+dll.prepend(20)
+dll.prepend(30)
+dll.append(35)
+dll.append(45)
+dll.append(55)
 
 
-// dll.display()
+dll.display()
 // dll.displayReverse()
 
+dll.insertAfter(7,20)
+
+dll.display()
 
 // dll.removeFromEnd()
 // dll.removeFromFront()
