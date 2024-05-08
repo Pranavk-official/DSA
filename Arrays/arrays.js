@@ -28,8 +28,12 @@ const reverseArray = (arr) => {
 }
 
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-reverseArray(array);
+console.log('Array Before Reversing');
 console.log(array);
+reverseArray(array);
+console.log('Array After Reversing');
+console.log(array);
+console.log('\n');
 
 // TODO: find the sum off all elesments in an array;
 
@@ -144,7 +148,9 @@ const kthLargest = (arr, k) => {
     return kthArray[k-1]
 }
 
-console.log(kthLargest(arr, 3));
+console.log(`\n\nArray: ${arr}`)
+let k = 3
+console.log(`${k}th(k) Largest Element: ${kthLargest(arr, k)}`);
 
 // TODO: missing number in consecutive integers
 

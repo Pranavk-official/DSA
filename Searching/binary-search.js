@@ -11,7 +11,7 @@ const binarySearch = (arr, target) => {
     // if the middle index is equal to the target
     if (arr[mid] === target) {
       return mid;
-    } else if (target < arr[mid] ) {
+    } else if (target < arr[mid]) {
       // if the middle index value is greater than the target
       // set the right index to the middle index - 1
       right = mid - 1;
@@ -25,46 +25,44 @@ const binarySearch = (arr, target) => {
   return -1;
 };
 
-
-
-
-
-const recursiveBinarySearch = (arr, target, left = 0, right = arr.length - 1) => {
+const recursiveBinarySearch = (
+  arr,
+  target,
+  left = 0,
+  right = arr.length - 1
+) => {
   if (left > right) {
-      return -1;
+    return -1;
   }
 
   let mid = Math.floor((left + right) / 2);
 
   if (arr[mid] === target) {
-      return mid;
+    return mid;
   } else if (arr[mid] < target) {
-      return recursiveBinarySearch(arr, target, mid + 1, right);
+    return recursiveBinarySearch(arr, target, mid + 1, right);
   } else {
-      return recursiveBinarySearch(arr, target, left, mid - 1);
+    return recursiveBinarySearch(arr, target, left, mid - 1);
   }
 };
 
-console.log('Binary Search');
+console.log("Binary Search");
 
 console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
 console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 90));
 console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9));
 
-
-console.log('Recursive Binary Search');
+console.log("Recursive Binary Search");
 
 console.log(recursiveBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
 console.log(recursiveBinarySearch([1, 3, 4, 5, 6, 7, 8, 9, 10], 90));
 console.log(recursiveBinarySearch([1, 3, 4, 5, 6, 7, 8, 9, 10], 2));
 console.log(recursiveBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9));
 
-
-
 const replaceWithZero = (arr, t) => {
   let targetIndex = binarySearch(arr, t);
   arr[targetIndex] = 0;
-}
+};
 
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
