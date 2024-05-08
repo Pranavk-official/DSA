@@ -190,21 +190,21 @@ Sure, let's briefly discuss each of these topics:
 
 
 <details>
-<summary>. </summary>
-- chunk array into sub-arrays of n elements (problem 1d to 2d)
-- Unicode
-- ASCII
-- escape sequences
-- \0
-- control charecters 
-- LF
-- cyclic reference
-- Weak Ref
-- virtual memory
-- Garbage Collection
-- convert string to Title Case
-- convert string to Pascal Case
-- convert string to camelCase
-- convert string to snake_case
-- convert string from Pascal Case to snake_case
+<summary>...</summary>
+    1. chunk array into sub1. rrays of n elements (problem 1d to 2d)
+    2. Unicode
+    3. ASCII
+    4. escape sequences
+    5. \0
+    6. control charecters 
+    7. LF
+    8. cyclic reference
+    9. Weak Ref
+    10. virtual memory
+    11. Garbage Collection
+    12. convert string to Title Case
+    13. convert string to Pascal Case
+    14. convert string to camelCase
+    15. convert string to snake_case
+    16. convert string from Pascal Case to snake_case
 </details>
