@@ -4,7 +4,7 @@
 This is a JavaScript based implementation of all the Data Structures and Algorithms.
 
 <details>
-<summary> Basic Theory Questions To Revise.</summary>
+<summary> Basic Theory Questions To Revise. (click to read more)</summary>
 
 Sure, let's briefly discuss each of these topics:
 
@@ -189,7 +189,8 @@ Sure, let's briefly discuss each of these topics:
 </details>
 
 
-
+<details>
+<summary>. </summary>
 - chunk array into sub-arrays of n elements (problem 1d to 2d)
 - Unicode
 - ASCII
@@ -206,3 +207,4 @@ Sure, let's briefly discuss each of these topics:
 - convert string to camelCase
 - convert string to snake_case
 - convert string from Pascal Case to snake_case
+</details>
