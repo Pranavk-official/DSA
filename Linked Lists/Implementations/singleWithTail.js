@@ -156,6 +156,25 @@ class Node {
             return data
         }
     }
+
+    removeFromMiddle() {
+        if(this.isEmpty()){
+            return null
+        }
+
+        let mid = Math.floor((this.size)/2)
+
+        let prev = this.head
+
+        for(let i = 0; i < mid - 1; i++) {
+            prev = prev.next
+        }   
+
+        let data = prev.next.data
+        prev.next = prev.next.next
+
+        return data
+    }
   }
 
 
@@ -171,8 +190,8 @@ module.exports = LinkedList
 //   list.append(7);
 //   list.append(8);
   
-// //   list.insert(6, 0);
-// //   list.insert(10, 4);
+//   list.insert(6, 0);
+//   list.insert(10, 4);
   
 
 // //   list.removeFrom(0);
@@ -181,6 +200,7 @@ module.exports = LinkedList
 // //   console.log(list.removeData(13));
 
 // list.display();
+// list.removeFromMiddle();
   
 // //   console.log(list.search(13));
 // //   console.log(list.search(5));
