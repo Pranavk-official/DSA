@@ -96,7 +96,7 @@ class Node {
 
 
     prepend(data) {
-        let newNode = Node(data);
+        let newNode = new Node(data);
 
         if (this.isEmpty()) {
             this.head = newNode
@@ -110,7 +110,7 @@ class Node {
     }
 
     append(data) {
-        let newNode = Node(data);
+        let newNode = new Node(data);
 
         if (this.isEmpty()) {
             this.head = newNode
@@ -123,39 +123,67 @@ class Node {
     }
 
     removeFromFront() {
-        
+        if (this.isEmpty()) {
+            return null
+        }
+
+        const data = this.head.data
+        this.head = this.head.next
+        this.size++
+
+        return data
     }
 
     removeFromEnd() {
+        if (this.isEmpty()) {
+            return null
+        }
 
+        const data = this.tail.data
+
+        if (this.size === 1) {
+            this.head = null
+            this.null = null
+        }else {
+            let prev = this.head
+            while(prev.next !== null){
+                prev = prev.next
+            }
+            prev.next = null
+            this.tail = prev
+            this.size--
+
+            return data
+        }
     }
   }
 
   
-//   const list = new LinkedList();
+  const list = new LinkedList();
   
-//   list.prepend(3);
-//   list.prepend(4);
-//   list.prepend(5);
+  list.prepend(3);
+  list.prepend(4);
+  list.prepend(5);
   
-//   list.append(7);
-//   list.append(8);
+  list.append(7);
+  list.append(8);
   
 //   list.insert(6, 0);
 //   list.insert(10, 4);
   
-//   list.display();
-  
+
 //   list.removeFrom(0);
-  
+
 //   list.removeData(8);
 //   console.log(list.removeData(13));
-  
-//   list.display();
+
+list.display();
   
 //   console.log(list.search(13));
 //   console.log(list.search(5));
-  
 //   list.reverse();
-  
-//   list.display();
+
+console.log(list.removeFromFront())
+console.log(list.removeFromEnd())
+
+  list.display();
