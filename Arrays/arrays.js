@@ -113,11 +113,38 @@ console.log(highestFreqElem(arr));
 
 // TODO: maximum difference between two element in an array
 
+const maxDiff = (arr) => {
+    let min = arr[0]
+    let max = arr[0]
+
+    for(let i = 0; i < arr.length ; i++) {
+        if(arr[i] <= min) {
+            min = arr[i]
+        }
+        if(arr[i] >= max) {
+            max = arr[i]
+        }
+    }
+
+    return max - min
+}
+
 // TODO: find the kth largest element in an array;
 
 const kthLargest = (arr, k) => {
+    const uniqueArr = new Set(arr)
+    let kthArray = []
     
+    for (let i = 0; i < arr.length; i++) {
+        uniqueArr.add(arr[i])
+    }
+
+    uniqueArr.forEach((value) => kthArray.push(value))
+
+    return kthArray[k-1]
 }
+
+console.log(kthLargest(arr, 3));
 
 // TODO: missing number in consecutive integers
 
@@ -143,3 +170,14 @@ const kthLargest = (arr, k) => {
 // TODO: Count pairs with given sum
 
 // TODO: array search
+
+const search = (arr, t) => {
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === t) {
+            return i
+        }
+    }
+
+    return -1
+}

@@ -11,12 +11,12 @@ const binarySearch = (arr, target) => {
     // if the middle index is equal to the target
     if (arr[mid] === target) {
       return mid;
-    } else if (arr[mid] < target) {
-      // if the middle index is less than the target
+    } else if (target < arr[mid] ) {
+      // if the middle index value is greater than the target
       // set the right index to the middle index - 1
       right = mid - 1;
     } else {
-      // if the middle index is greater than the target
+      // if the middle index value is less than the target
       // set the left index to the middle index + 1
       left = mid + 1;
     }
@@ -24,6 +24,9 @@ const binarySearch = (arr, target) => {
 
   return -1;
 };
+
+
+
 
 
 const recursiveBinarySearch = (arr, target, left = 0, right = arr.length - 1) => {

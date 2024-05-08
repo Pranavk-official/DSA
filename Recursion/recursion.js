@@ -9,6 +9,13 @@ const fifthRecursion = (counter = 0) => {
 
 fifthRecursion()
 
-const recursion = new Solution
+const fibonaaci = (n) => {
+    if(n < 2) return n
+    return fibonaaci(n - 1) + fibonaaci(n - 2)
+}
+
+const factorial = (n) => {
+    
+}
 
 recursion.fifthRecursion()
