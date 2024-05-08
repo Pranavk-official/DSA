@@ -104,18 +104,43 @@ class DoublyLinkedList {
         }
     }
 
+    /**
+     * Inserts a new node with the given data at the specified index in the linked list.
+     *
+     * @param {any} data - The data to be inserted into the linked list.
+     * @param {number} index - The index at which the new node should be inserted.
+     * @return {void} This function does not return anything.
+     */
     insert(data, index) {
+        if(index < 0 || index > this.size) {
+            return;
+        }
 
+        if(index == 0){
+            this.prepend(data)
+        }else if(index === this.size) {
+            this.append(data)
+        }else {
+            const newNode = new Node(data)
+            let prev = this.head;
+            
+            for(let i = 0; i < index; i++){
+                prev = prev.next;
+            }
+
+            newNode.next = prev.next;
+            prev.next.prev = newNode
+            newNode.prev = prev;
+            prev.next = newNode
+            this.size++
+        }
     }
-
-    insertAfter() {
-
-    }
-
-    insertBefore() {
-
-    }
-
+    
+    /**
+     * Displays the elements of the linked list.
+     *
+     * @return {void} This function does not return a value.
+     */
     display() {
         if(this.isEmpty()){
             console.log("list is empty")
@@ -124,7 +149,7 @@ class DoublyLinkedList {
             let list = ""
 
             while (currentNode) {
-                list += ` <--> ${currentNode.data} <--> `
+                list += ` ${currentNode.data} `
                 currentNode = currentNode.next
             }
 
@@ -140,7 +165,7 @@ class DoublyLinkedList {
             let list = ""
 
             while (currentNode) {
-                list += ` <--> ${currentNode.data} <--> `
+                list += ` ${currentNode.data} `
                 currentNode = currentNode.prev
             }
 
@@ -150,22 +175,23 @@ class DoublyLinkedList {
 }
 
 
+module.exports = DoublyLinkedList
+
+// const dll = new DoublyLinkedList()
+
+// dll.prepend(10)
+// dll.prepend(20)
+// dll.prepend(30)
+// dll.append(35)
+// dll.append(45)
+// dll.append(55)
 
 
-const dll = new DoublyLinkedList()
-
-dll.prepend(10)
-dll.prepend(20)
-dll.prepend(30)
-dll.append(35)
-dll.append(45)
-dll.append(55)
+// dll.display()
+// dll.displayReverse()
 
 
-dll.display()
-dll.displayReverse()
-
-
-dll.removeFromEnd()
-dll.removeFromFront()
-dll.display()
+// dll.removeFromEnd()
+// dll.removeFromFront()
+// dll.display()
+// console.log(dll.getSize())
