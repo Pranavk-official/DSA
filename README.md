@@ -6,7 +6,6 @@ This is a JavaScript based implementation of all the Data Structures and Algorit
 <details>
 <summary> Basic Theory Questions To Revise. (click to read more)</summary>
 
-Sure, let's briefly discuss each of these topics:
 
 1. **Data Structure:**
    - Data structures are ways of organizing and storing data in a computer so that it can be accessed and modified efficiently. Common data structures include arrays, linked lists, stacks, queues, trees, and graphs.
@@ -207,4 +206,279 @@ Sure, let's briefly discuss each of these topics:
     14. convert string to camelCase
     15. convert string to snake_case
     16. convert string from Pascal Case to snake_case
+</details>
+
+
+<details>
+<summary>Data Structures Comparisons</summary>
+
+1. **Array vs. Linked List:**
+   - Array:
+     - Elements are stored in contiguous memory locations.
+     - Random access is efficient (O(1) time complexity).
+     - Insertion and deletion at the beginning or middle are less efficient (O(n) time complexity).
+   - Linked List:
+     - Elements are stored non-contiguously, with each element containing a reference to the next element.
+     - Random access is less efficient (O(n) time complexity).
+     - Insertion and deletion at the beginning or middle are efficient (O(1) time complexity).
+
+2. **Stack vs. Queue:**
+   - Stack:
+     - Follows Last In, First Out (LIFO) principle.
+     - Operations: push (adds an element to the top) and pop (removes the top element).
+     - Applications: function call stack, undo mechanisms.
+   - Queue:
+     - Follows First In, First Out (FIFO) principle.
+     - Operations: enqueue (adds an element to the rear) and dequeue (removes the front element).
+     - Applications: job scheduling, breadth-first search.
+
+3. **Binary Tree vs. Binary Search Tree (BST):**
+   - Binary Tree:
+     - Each node has at most two children.
+     - No specific order is maintained among the elements.
+   - Binary Search Tree (BST):
+     - Each node has at most two children.
+     - Left child node is smaller, and the right child node is larger than the parent node.
+     - Allows for efficient searching (O(log n) time complexity).
+
+4. **Graph vs. Tree:**
+   - Graph:
+     - Consists of vertices/nodes connected by edges.
+     - May contain cycles.
+     - Can be directed or undirected.
+   - Tree:
+     - Special type of graph with no cycles.
+     - Consists of nodes connected by edges.
+     - Has a single root node and each node has exactly one parent, except the root.
+
+5. **Hash Table vs. Array:**
+   - Hash Table:
+     - Data structure that maps keys to values.
+     - Provides constant-time (O(1)) average case lookup, insertion, and deletion.
+     - Uses a hash function to determine the index of each element.
+   - Array:
+     - Ordered collection of elements stored in contiguous memory locations.
+     - Provides constant-time (O(1)) random access but linear-time (O(n)) lookup for unsorted arrays.
+
+
+</details>
+
+<details>
+<summary>Pro's and Con's of each Data Structures</summary>
+
+
+1. **Array:**
+   - Pros:
+     - Efficient random access (O(1) time complexity).
+     - Simple and easy to use.
+     - Fixed size or dynamic resizing (in dynamic arrays).
+   - Cons:
+     - Costly insertion and deletion in the middle (O(n) time complexity).
+     - Fixed size in static arrays.
+     - Contiguous memory allocation may lead to memory fragmentation.
+
+2. **Linked List:**
+   - Pros:
+     - Efficient insertion and deletion at the beginning or middle (O(1) time complexity).
+     - Dynamic size (no need for resizing).
+     - No wasted memory due to fragmentation.
+   - Cons:
+     - Inefficient random access (O(n) time complexity).
+     - Additional memory overhead for storing references.
+     - More complex implementation compared to arrays.
+
+3. **Stack:**
+   - Pros:
+     - Simple and intuitive Last In, First Out (LIFO) structure.
+     - Efficient for managing function calls, undo mechanisms, and backtracking.
+     - Constant-time push and pop operations (O(1) time complexity).
+   - Cons:
+     - Limited functionality (e.g., no random access).
+     - May lead to stack overflow if the maximum stack size is exceeded.
+     - Not suitable for scenarios requiring multiple access points.
+
+4. **Queue:**
+   - Pros:
+     - Follows First In, First Out (FIFO) principle, suitable for job scheduling and breadth-first search.
+     - Efficient enqueue and dequeue operations (O(1) time complexity).
+     - Can be implemented using arrays or linked lists.
+   - Cons:
+     - Limited functionality (e.g., no random access).
+     - May require resizing in dynamic arrays.
+
+5. **Binary Tree:**
+   - Pros:
+     - Efficient for hierarchical data representation.
+     - Supports efficient searching, insertion, and deletion (O(log n) time complexity for balanced trees).
+     - Can be used for binary search and sorted traversal.
+   - Cons:
+     - May become unbalanced, leading to degradation in performance (O(n) time complexity for unbalanced trees).
+     - Requires additional space for storing references to child nodes.
+
+6. **Hash Table:**
+   - Pros:
+     - Provides constant-time average-case lookup, insertion, and deletion (O(1) time complexity).
+     - Efficient for storing key-value pairs and implementing sets and dictionaries.
+     - Supports dynamic resizing for efficient memory usage.
+   - Cons:
+     - Worst-case time complexity for operations may degrade to O(n) if collisions occur frequently.
+     - Requires a good hash function for uniform distribution of keys.
+
+</details>
+
+
+<details>
+<summary>Big Oh of each Data Structure Operations</summary>
+
+
+1. **Array:**
+   - Access (Random): O(1)
+   - Search (Unsorted): O(n)
+   - Search (Sorted): O(log n)
+   - Insertion (End): O(1) (amortized)
+   - Insertion (Middle): O(n)
+   - Deletion (End): O(1)
+   - Deletion (Middle): O(n)
+
+2. **Linked List:**
+   - Access (Random): O(n)
+   - Search: O(n)
+   - Insertion (Beginning): O(1)
+   - Insertion (End): O(1) (with tail pointer)
+   - Insertion (Middle, after traversal): O(n)
+   - Deletion (Beginning): O(1)
+   - Deletion (End): O(1) (with tail pointer)
+   - Deletion (Middle, after traversal): O(n)
+
+3. **Stack:**
+   - Push (Insertion): O(1)
+   - Pop (Deletion): O(1)
+   - Peek (Access top element): O(1)
+
+4. **Queue:**
+   - Enqueue (Insertion): O(1)
+   - Dequeue (Deletion): O(1)
+   - Peek (Access front element): O(1)
+
+5. **Binary Tree:**
+   - Search (Average, Balanced): O(log n)
+   - Search (Worst-case, Unbalanced): O(n)
+   - Insertion (Average, Balanced): O(log n)
+   - Insertion (Worst-case, Unbalanced): O(n)
+   - Deletion (Average, Balanced): O(log n)
+   - Deletion (Worst-case, Unbalanced): O(n)
+
+6. **Hash Table:**
+   - Search: O(1) (average case, assuming uniform hashing)
+   - Insertion: O(1) (average case, assuming uniform hashing)
+   - Deletion: O(1) (average case, assuming uniform hashing)
+
+
+</details>
+<details>
+<summary>Big Oh of each Searching Algorithm</summary>
+
+
+1. **Linear Search:**
+   - Average Case: O(n)
+   - Worst Case: O(n)
+   - Best Case: O(1) (if the target element is found at the beginning)
+
+2. **Binary Search:**
+   - Average Case: O(log n)
+   - Worst Case: O(log n)
+   - Best Case: O(1) (if the target element is found at the middle)
+
+3. **Depth-First Search (DFS) in Graphs:**
+   - Time Complexity: O(V + E)
+     - V: Number of vertices
+     - E: Number of edges
+   - Space Complexity: O(V) (for maintaining the stack or recursion depth)
+
+4. **Breadth-First Search (BFS) in Graphs:**
+   - Time Complexity: O(V + E)
+   - Space Complexity: O(V) (for maintaining the queue)
+
+5. **Interpolation Search:**
+   - Average Case: O(log log n)
+   - Worst Case: O(n) (for uniformly distributed or sorted arrays)
+
+6. **Exponential Search:**
+   - Time Complexity: O(log n)
+   - Space Complexity: O(1)
+
+7. **Jump Search:**
+   - Time Complexity: O(√n)
+   - Space Complexity: O(1)
+
+8. **Fibonacci Search:**
+   - Time Complexity: O(log n)
+   - Space Complexity: O(1)
+
+9. **Ternary Search:**
+   - Time Complexity: O(log3 n)
+   - Space Complexity: O(1)
+
+10. **Hash Table Search:**
+    - Average Case: O(1)
+    - Worst Case: O(n) (due to collisions)
+
+
+</details>
+<details>
+<summary>Big Oh of each Sorting Algorithm</summary>
+
+
+1. **Bubble Sort:**
+   - Best Case: O(n)
+   - Average Case: O(n^2)
+   - Worst Case: O(n^2)
+
+2. **Selection Sort:**
+   - Best Case: O(n^2)
+   - Average Case: O(n^2)
+   - Worst Case: O(n^2)
+
+3. **Insertion Sort:**
+   - Best Case: O(n)
+   - Average Case: O(n^2)
+   - Worst Case: O(n^2)
+
+4. **Merge Sort:**
+   - Best Case: O(n log n)
+   - Average Case: O(n log n)
+   - Worst Case: O(n log n)
+
+5. **Quick Sort:**
+   - Best Case: O(n log n)
+   - Average Case: O(n log n)
+   - Worst Case: O(n^2) (rare, but can occur if the pivot is not well-chosen)
+
+6. **Heap Sort:**
+   - Best Case: O(n log n)
+   - Average Case: O(n log n)
+   - Worst Case: O(n log n)
+
+7. **Counting Sort:**
+   - Best Case: O(n + k)
+     - n: Number of elements in the input array
+     - k: Range of input (maximum - minimum + 1)
+   - Average Case: O(n + k)
+   - Worst Case: O(n + k)
+
+8. **Radix Sort:**
+   - Best Case: O(nk)
+     - n: Number of elements in the input array
+     - k: Number of passes (number of digits in the maximum number)
+   - Average Case: O(nk)
+   - Worst Case: O(nk)
+
+9. **Bucket Sort:**
+   - Best Case: O(n + k)
+     - n: Number of elements in the input array
+     - k: Number of buckets
+   - Average Case: O(n + k)
+   - Worst Case: O(n^2) (if elements are unevenly distributed among buckets)
+
+
 </details>
