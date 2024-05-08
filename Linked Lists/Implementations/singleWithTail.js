@@ -119,6 +119,43 @@ class LinkedList {
     this.size++;
   }
 
+
+  insertAfter(data,x) {
+    if (this.isEmpty()) {
+      return null
+    }
+
+    let newNode = new Node(data)
+    let prev = this.head
+
+    while(prev && prev.data !== x ){
+      prev = prev.next
+    }
+
+    // console.log(prev);
+    newNode.next = prev.next
+    prev.next = newNode
+    this.size++
+  }
+  insertBefore(data,x) {
+    if (this.isEmpty()) {
+      return null
+    }
+
+    let newNode = new Node(data)
+    let prev = this.head
+
+    while(prev && prev.next.data !== x ){
+      prev = prev.next
+    }
+
+    // console.log(prev);
+
+    newNode.next = prev.next
+    prev.next = newNode
+    this.size++
+  }
+
   removeFromFront() {
     if (this.isEmpty()) {
       return null;
@@ -185,6 +222,7 @@ list.prepend(5);
 list.append(7);
 list.append(8);
 
+
 // list.insert(6, 0);
 // list.insert(10, 4);
 
@@ -194,6 +232,7 @@ list.append(8);
 // //   console.log(list.removeData(13));
 
 list.display();
+
 list.removeFromMiddle();
 
 // //   console.log(list.search(13));
@@ -205,4 +244,6 @@ list.removeFromMiddle();
 
 list.display();
 list.removeFromMiddle();
+list.insertAfter(16, 4);
+list.insertBefore(17, 4);
 list.display();
