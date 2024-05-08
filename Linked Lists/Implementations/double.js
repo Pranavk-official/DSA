@@ -83,7 +83,89 @@ class DoublyLinkedList {
 
         const data = this.head.data
         this.head = this.head.next
-        this.size++
+        this.head.prev = null
+        this.size--
+
+        return data
     }
 
+    removeFromEnd() {
+        if(this.size === 1){
+            this.head = null
+            this.tail = null
+        }else {
+            let removeNode = this.tail
+
+            this.tail = this.tail.prev
+            this.tail.next = null
+            removeNode.prev = null
+
+            return removeNode.data
+        }
+    }
+
+    insert(data, index) {
+
+    }
+
+    insertAfter() {
+
+    }
+
+    insertBefore() {
+
+    }
+
+    display() {
+        if(this.isEmpty()){
+            console.log("list is empty")
+        }else {
+            let currentNode = this.head
+            let list = ""
+
+            while (currentNode) {
+                list += ` <--> ${currentNode.data} <--> `
+                currentNode = currentNode.next
+            }
+
+            console.log(list)
+        }
+    }
+
+    displayReverse() {
+        if(this.isEmpty()){
+            console.log("list is empty")
+        }else {
+            let currentNode = this.tail
+            let list = ""
+
+            while (currentNode) {
+                list += ` <--> ${currentNode.data} <--> `
+                currentNode = currentNode.prev
+            }
+
+            console.log(list)
+        }
+    }
 }
+
+
+
+
+const dll = new DoublyLinkedList()
+
+dll.prepend(10)
+dll.prepend(20)
+dll.prepend(30)
+dll.append(35)
+dll.append(45)
+dll.append(55)
+
+
+dll.display()
+dll.displayReverse()
+
+
+dll.removeFromEnd()
+dll.removeFromFront()
+dll.display()
