@@ -218,6 +218,34 @@ class DoublyLinkedList {
       console.log(list);
     }
   }
+
+  /**
+   * Merges the given list into the current list.
+   * @param {DoublyLinkedList} list - List to merge.
+   * @return {void} This function does not return a value.
+   */
+  merge(list) {
+    if (this.isEmpty() || list.isEmpty()) {
+      return;
+    }
+
+    if (this.tail === null) {
+      this.tail = list.head;
+      list.head.prev = null;
+    } else {
+      let currentNode = this.tail;
+      while (currentNode.next !== null) {
+        currentNode = currentNode.next;
+      }
+      currentNode.next = list.head;
+      list.head.prev = currentNode;
+    }
+
+    this.size += list.size;
+    list.head = null;
+    list.tail = null;
+    list.size = 0;
+  }
 }
 
 // module.exports = DoublyLinkedList
@@ -263,6 +291,6 @@ list2.append(55)
 list2.append(65)
 list2.append(75)
 
-list1.tail.next = list2.head
+list1.merge(list2)
 
 list1.display()
