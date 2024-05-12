@@ -220,28 +220,49 @@ class DoublyLinkedList {
   }
 }
 
-module.exports = DoublyLinkedList
+// module.exports = DoublyLinkedList
 
-// const dll = new DoublyLinkedList();
+const dll = new DoublyLinkedList();
+const list1 = new DoublyLinkedList();
+const list2 = new DoublyLinkedList();
 
-// dll.prepend(10);
-// dll.prepend(20);
-// dll.prepend(30);
-// dll.append(35);
-// dll.append(45);
-// dll.append(55);
+dll.prepend(10);
+dll.prepend(20);
+dll.prepend(30);
+dll.append(35);
+dll.append(45);
+dll.append(55);
 
-// dll.display();
+dll.display();
 // dll.displayReverse();
 
 // dll.insertAfter(7,20)
 
-// dll.insertBefore(5, 20);
+dll.insert(5, 0);
 
 // dll.display();
 // dll.displayReverse();
 
 // dll.removeFromEnd()
 // dll.removeFromFront()
-// dll.display()
+dll.display()
 // console.log(dll.getSize())
+
+
+
+
+list1.append(30)
+list1.append(40)
+list1.append(50)
+list1.append(60)
+list1.append(70)
+
+list2.append(35)
+list2.append(45)
+list2.append(55)
+list2.append(65)
+list2.append(75)
+
+list1.tail.next = list2.head
+
+list1.display()
