@@ -63,7 +63,7 @@ const frequencyOfArrayElems = (arr) => {
     return hashTable
 }
 
-const arr = [1,1,2,4,2,5,6,2,3,2,8,9,2,0,2];
+const arr = [1,1,2,4,2,5,6,2,3,2,8,9,2,2];
 console.log(frequencyOfArrayElems(arr));
 
 // TODO: find the first non repeating element in the array;
@@ -79,15 +79,15 @@ const firstNonRepeatingElem = (arr) => {
     }
 
     for(let i = 0; i < arr.length ; i++) {
-        if(hashTable[arr[i] != 1]) {
-            return i+1
+        if(hashTable[arr[i]] == 1) {
+            return arr[i]
         }
     }
 
     return -1
 }
 
-console.log(firstNonRepeatingElem(arr));
+console.log(`First Non Repeating Element in an array : ${firstNonRepeatingElem(arr)}`);
 
 // TODO: find the element with highest frequency;
 
