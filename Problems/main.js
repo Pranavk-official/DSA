@@ -45,3 +45,25 @@ const climbingStaircase = (n) =>{
 
 // TODO: Tower of Hanoi
 
+/**
+ * Recursively solves the Tower of Hanoi puzzle with n disks.
+ *
+ * @param {number} n - The number of disks.
+ * @param {string} from - The source peg.
+ * @param {string} to - The destination peg.
+ * @param {string} using - The auxiliary peg.
+ * @return {undefined} This function does not return a value.
+ * 
+ * Big Oh - O(2^n)
+ */
+const towerOfHanoi = (n, from, to, using) => {
+    if (n === 1) {
+        console.log(`Move disk 1 from ${from} to ${to} `);
+        return
+    }
+
+    towerOfHanoi(n-1, from, using, to)
+    console.log(`Move disk ${n} from ${using} to ${to}`);
+    towerOfHanoi(n-1,using, to, from)
+    console.log(`Move disk ${n} from ${using} to ${to}`);   
+}
