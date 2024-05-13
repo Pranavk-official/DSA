@@ -24,3 +24,24 @@ const cartesianProduct = (arr1,arr2) => {
 
 // TODO: Climbing Stairs
 
+/**
+ * Calculates the number of ways to climb a staircase with n steps.
+ *
+ * @param {number} n - The number of steps in the staircase.
+ * @return {number} The number of ways to climb the staircase.
+ * 
+ * Big Oh - O(n)
+ */
+const climbingStaircase = (n) =>{
+    const noOfWay = [1,2]
+
+    for (let i = 2; i < n - 1; i++) {
+        noOfWay[i] = noOfWay[i-1] + noOfWay[i-2]
+    }
+
+    return noOfWay[n -1]
+} 
+
+
+// TODO: Tower of Hanoi
+
