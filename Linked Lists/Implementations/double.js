@@ -294,3 +294,4 @@ list2.append(75)
 list1.merge(list2)
 
 list1.display()
+list2.display()

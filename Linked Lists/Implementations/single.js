@@ -303,6 +303,10 @@ list.display();
 console.log(list.search(13));
 console.log(list.search(5));
 
+
+list.display();
+list.append(55)
 list.reverse();
 
+list.append(55)
 list.display();

@@ -209,41 +209,57 @@ class LinkedList {
 
     return data;
   }
+
+  reverse() {
+    let previousNode = null
+    let currentNode = this.head
+
+    while(currentNode){
+      let next = currentNode.next
+      currentNode.next = previousNode
+      previousNode = currentNode
+      currentNode = next
+    }
+
+    this.head = previousNode
+  }
 }
 
-// module.exports = LinkedList
+module.exports = LinkedList
 
-const list = new LinkedList();
+// const list = new LinkedList();
 
-list.prepend(3);
-list.prepend(4);
-list.prepend(5);
+// list.prepend(3);
+// list.prepend(4);
+// list.prepend(5);
 
-list.append(7);
-list.append(8);
+// list.append(7);
+// list.append(8);
 
 
-// list.insert(6, 0);
-// list.insert(10, 4);
+// // list.insert(6, 0);
+// // list.insert(10, 4);
 
-// //   list.removeFrom(0);
+// // //   list.removeFrom(0);
 
-// //   list.removeData(8);
-// //   console.log(list.removeData(13));
+// // //   list.removeData(8);
+// // //   console.log(list.removeData(13));
 
-list.display();
+// list.display();
 
-list.removeFromMiddle();
+// list.removeFromMiddle();
 
-// //   console.log(list.search(13));
-// //   console.log(list.search(5));
-// //   list.reverse();
+// // //   console.log(list.search(13));
+// // //   console.log(list.search(5));
+// // //   list.reverse();
 
-// console.log(list.removeFromFront())
-// console.log(list.removeFromEnd())
+// // console.log(list.removeFromFront())
+// // console.log(list.removeFromEnd())
 
-list.display();
-list.removeFromMiddle();
-list.insertAfter(16, 4);
-list.insertBefore(17, 4);
-list.display();
+// list.display();
+// list.removeFromMiddle();
+// list.insertAfter(16, 4);
+// list.insertBefore(17, 4);
+// list.display();
+// list.reverse();
+// list.display();
