@@ -1,51 +1,49 @@
-const LinkedList = require ('../Linked Lists/Implementations/singleWithTail');
-
+const LinkedList = require("../Linked Lists/Implementations/singleWithTail");
 
 class LinkedListStack {
-    constructor() {
-        this.list = new LinkedList()
-    }
+  constructor() {
+    this.list = new LinkedList();
+  }
 
-    push(data) {
-        this.list.prepend(data)
-    }
+  push(data) {
+    this.list.prepend(data);
+  }
 
-    pop() {
-        this.list.removeFromFront()
-    }
+  pop() {
+    this.list.removeFromFront();
+  }
 
-    peek() {
-        return this.list.head.data
-    }
+  peek() {
+    return this.list.head.data;
+  }
 
-    isEmpty() {
-        return this.list.isEmpty()
-    }
-    
-    getSize() {
-        return this.list.getSize()
-    }
+  isEmpty() {
+    return this.list.isEmpty();
+  }
 
-    display() {
-        return this.list.display()
-    }
+  getSize() {
+    return this.list.getSize();
+  }
+
+  display() {
+    return this.list.display();
+  }
 }
 
+const stack = new LinkedListStack();
 
-const stack = new LinkedListStack
+console.log(stack.isEmpty());
 
-console.log(stack.isEmpty())
+stack.push(5);
+stack.push(12);
+stack.push(18);
 
-stack.push(5)
-stack.push(12)
-stack.push(18)
+console.log(stack.isEmpty());
 
-console.log(stack.isEmpty())
+stack.display();
 
-stack.display()
+stack.pop();
 
-stack.pop()
+stack.display();
 
-stack.display()
-
-console.log(stack.peek())
+console.log(stack.peek());

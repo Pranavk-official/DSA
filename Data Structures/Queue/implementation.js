@@ -181,7 +181,7 @@ class CircularQueue {
 
     let i;
     let str = "";
-    for(i = this.front; i != this.rear; i = (i + 1) % this.size) {
+    for (i = this.front; i != this.rear; i = (i + 1) % this.size) {
       str += this.items[i] + " ";
     }
 
