@@ -24,6 +24,12 @@ const bubbleSort = (arr) => {
 };
 
 
+/**
+ * Sorts an array in ascending order using the insertion sort algorithm.
+ *
+ * @param {Array} arr - The array to be sorted.
+ * @return {undefined} This function does not return a value.
+ */
 const insertionSort = (arr) => {
   for (let i = 1; i < arr.length; i++) {
     let numberToInsert = arr[i]
@@ -37,6 +43,12 @@ const insertionSort = (arr) => {
   }
 }
 
+/**
+ * Sorts an array in descending order using the insertion sort algorithm.
+ *
+ * @param {Array} array - The array to be sorted.
+ * @return {undefined} This function does not return a value.
+ */
 const insertionSortDescending = (array) => {
   for (let i = 1; i < array.length; i++) {
     const elementToInsert = array[i]
@@ -51,10 +63,47 @@ const insertionSortDescending = (array) => {
 }
 
 // TODO: Selection Sort needs to be implemented 
-const selectionSort = (arr) => {}
 
 
-// FIXME: Need to learn quickSort in deep
+/**
+ * Sorts an array in ascending order using the selection sort algorithm.
+ *
+ * @param {Array} arr - The array to be sorted.
+ * @return {undefined} This function does not return a value.
+ * 
+ * Big Oh - O(n^2)
+ * 
+ */
+const selectionSort = (arr) => {
+  for (let i = 0; i < arr.length - 2; i++) {
+    let minIndex = i
+
+    for (let j = i; j < arr.length - 1; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j
+      }
+    }
+
+    let temp = arr[i]
+    arr[i] = arr[minIndex]
+    arr[minIndex] = temp
+  }
+}
+
+
+const someArray = [10, 5, 3, 8, 2, 20, 100]
+selectionSort(someArray)
+console.log(someArray)
+
+
+// FIXME: Need to learn quickSort in detail
+
+/**
+ * Sorts an array using the quicksort algorithm.
+ *
+ * @param {Array} arr - The array to be sorted.
+ * @return {Array} The sorted array.
+ */
 const quickSort = (arr) => {
 /**
  * Sorts an array using the quicksort algorithm.
@@ -105,6 +154,15 @@ const mergeSort = (arr) => {
   return merge(mergeSort(left), mergeSort(right))
 }
 
+/**
+ * Merges two sorted arrays into one sorted array.
+ *
+ * @param {Array} left - The left sorted array.
+ * @param {Array} right - The right sorted array.
+ * @return {Array} The merged and sorted array.
+ * 
+ * Big Oh - O(n)
+ */
 const merge = (left, right) => {
   let sortedArr = []
 
