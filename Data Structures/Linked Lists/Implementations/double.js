@@ -73,6 +73,30 @@ class DoublyLinkedList {
     this.size++;
   }
 
+  remove(data) {
+    if (this.isEmpty()){
+      return null
+    }
+    
+    let currentNode = this.head;
+    let prev = null;
+    while (currentNode.data !== data) {
+      prev = currentNode;
+      currentNode = currentNode.next;
+    }
+
+    if (currentNode === this.head) {
+      this.head = currentNode.next;
+    } else if (currentNode === this.tail) {
+      this.tail = prev;
+    } else {
+      prev.next = currentNode.next;
+    }
+    this.size--;
+    return currentNode.data
+  }
+
+
   removeFromFront() {
     if (this.isEmpty()) {
       return null;
