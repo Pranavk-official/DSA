@@ -482,3 +482,343 @@ This is a JavaScript based implementation of all the Data Structures and Algorit
 
 
 </details>
+
+---
+
+
+### Week 1
+
+#### Algorithms
+- **Search**
+  - Binary Search (recursive also)
+  - Linear Search
+- **Recursion**
+  - Iterative & recursive
+- **Virtual Memory**
+  - Amortised Residing
+- **Dynamic Programming**
+  - Memoize Approach
+  - Bottom Up Approach
+- **Problems**
+  - Factorial, Fibonacci, Prime Number (with and without recursion)
+
+#### Complexity Analysis
+- **Time Complexity**
+- **Space Complexity**
+- **Asymptotic Notations**
+  - Big O Notation
+  - Omega Notation
+  - Theta Notation
+
+#### Memory
+- **Memory Allocation**
+  - Bit vs Byte
+  - Memory Address
+  - Contiguous Memory Allocation
+  - Non-contiguous Memory Allocation
+- **Stack**
+  - Primitive Types Are Stored in Stack
+- **Heap**
+  - Reference Type Are Stored in Heap
+    - Eg: Arrays, Functions, Objects
+- **Memory Leak**
+  - Symptoms
+  - Garbage Collections
+  - Process
+  - Reasons for Memory Leak
+  - How to Debug
+
+#### Big O Notation
+- Linear Time Complexity
+- Constant Time Complexity
+- Quadratic Time Complexity
+- Cubic Time Complexity
+- Logarithmic Complexity
+- Exponential Complexity
+
+#### Operations in Normal Array
+- Init
+- Set
+- Get
+- Traverse
+- Insert
+- Delete
+
+#### Data Structures
+- What is DS?
+- Advantages and Disadvantages
+- Examples
+  - DOM
+  - Undo & Redo
+  - OS Job Scheduling
+  - Dynamic Array
+    - It’s Working and Memory Allocation
+  - Set
+  - Linked List
+    - Advantages and Disadvantages
+    - Applications
+    - Creating a Linked List
+    - Operation
+      - Init
+      - Set
+      - Get
+      - Traverse
+      - Insert
+      - Delete
+    - Singly Linked List
+    - Double Linked List
+    - Circular Linked List
+    - Array vs Linked List
+
+#### Others
+- Built-in DS in JS
+  - Array
+    - Push, Pop, Shift, Unshift, ForEach, Map, Filter, Reduce, Concat, Slice, Splice, Sort()
+    - Some(), Every(), Find(), FindIndex(), Fill(), Flat(), Reverse(), Sort()
+  - Objects
+    - Insert, Remove, Access, Search
+    - Object.keys(), Object.values(), Object.entries()
+  - Sets
+    - Add, Has, Delete, Size, Clear
+  - Maps
+    - Set, Get, Has, Delete, Size, Clear
+  - Array vs Set
+  - Object vs Map
+  - Strings
+    - Primitive and Object String
+    - Escape Char
+    - ASCII
+      - 32 - Space
+      - 48-57 == (0-9)
+      - 65-90 == (A-Z)
+      - 97-122 == (a-z)
+    - Unicode
+    - UTF-8
+
+#### Custom DS
+- Stacks
+- Queue
+- Circular Queues
+- Linked Lists
+- Hash Tables
+- Trees
+- Graphs
+- Trees
+  - Binary Tree
+  - Complete Binary Tree
+  - Full Binary Tree
+  - Perfect Binary Tree
+  - Heap
+    - Features
+    - Min Heap
+      - Creating Heap
+      - Insert
+      - Delete
+    - Max Heap
+
+### Week 2
+
+#### Algorithms
+- **Sorting**
+  - Bubble Sort
+  - Insertion Sort
+  - Quick Sort
+    - Divide and Conquer
+    - Partition Method
+    - Pivot Selection
+      - Last, First
+      - Average/Median
+  - Heap Sort
+  - Merge Sort
+    - Divide and Conquer
+    - Merge vs Quick Sort
+
+#### Data Structures
+- **Stacks**
+  - LIFO
+  - Push, Pop
+  - Stack Underflow
+  - Stack Overflow
+  - Use Cases
+  - Types of Stack
+    - Linear Stack
+    - Dynamic Stack
+    - Array-Based
+    - Linked List Based
+- **Queue**
+  - FIFO
+  - Enqueue
+  - Dequeue
+  - Peek
+  - Priority Queue
+  - Circular Queue
+  - Uses
+  - Types of Queue
+    - Linear Queue
+    - Circular Queue
+    - Priority Queue
+    - Dequeue (Double Ended Queue)
+      - Input Restricted
+      - Output Restricted
+    - Blocking Queue
+    - Concurrent Queue
+    - Delay Queue
+- **Hash Table**
+  - Searching O(1)
+  - Hash Function
+  - Collision
+  - Dynamic Restructuring
+  - Uses
+  - Load Factor
+  - Operations
+    - Init
+    - Insert
+    - Search
+    - Delete
+    - Traverse
+- **Please Note**
+  - Week Set, Week Map
+  - Collisions Handling
+    - Separate Chaining
+    - Open Addressing
+      - Linear Probing
+      - Quadratic Probing
+      - Double Hashing
+    - Clustering
+      - Cuckoo Hashing
+      - Robin Hood Hashing
+  - SHA: Secure Hashing Algorithm
+
+### Week 3
+
+#### Linear, Non-linear, Hierarchical Data Structures
+
+#### Tree
+- Features
+- Uses
+- Parent, Child, Root, Leaf, Sibling, Ancestor, Descendant, Path, Distance, Degree, Depth, Height, Edge, Subtree
+- Types of Trees on Nodes
+  - Binary Tree
+  - Ternary Tree
+  - K-array Tree
+  - Threaded Binary Tree
+- Types of Trees on Structure
+  - Complete Tree
+  - Full Tree
+  - Perfect Tree
+  - Degenerate
+    - Left-Skew
+    - Right-Skew
+- Binary Search Tree (BST)
+  - BST vs BT
+  - Uses
+  - Balanced vs Unbalanced Tree
+  - Properties of BST
+  - Operations
+    - Inserting
+    - Deletion
+    - Traversal
+      - DFS
+        - InOrder
+        - PreOrder
+        - PostOrder
+      - BFS
+- Balanced Search Tree
+  - AVL Tree
+  - Red-Black Tree
+  - Prefix Tree
+  - M-way Search Tree
+    - B Tree
+    - B+ Tree
+  - Merkle Tree
+  - Red-Black Tree vs AVL
+- Heap
+  - Min Heap
+    - To Get Value Of
+      - Left Child
+      - Right Child
+      - Parent
+    - Operations
+      - Init/Heapify
+      - Insert
+      - Delete
+  - Max Heap
+    - Heapify
+      - Bottom-Up
+      - Top-Down
+  - DEPQ
+- Trie
+  - String vs Trie
+  - Operations
+    - Init
+    - Insertion
+    - Delete
+    - Search
+  - Prefix and Suffix Tree
+    - Terminator Char
+  - Compressed Trie
+    - Radix Tree (Patricia Trie)
+
+#### Graph
+- Vertex, Edge
+  - Adjacency List, Matrix
+- Types
+  - Unidirectional (Directed Graph)
+  - Bidirectional (Undirected Graph)
+  - Cyclic
+  - Disconnected
+  - Weighted Graph
+  - Unweighted Graph
+  - Bipartite Graph
+- Traversal
+  - BFS
+  - DFS
+- River Size Problem
+
+#### Algorithms
+- Greedy Method
+- Kruskal's Algorithm
+- Prim's Algorithm
+- Dijkstra's Algorithm
+- Bellman-Ford Algorithm
+- Topological Sorting
+- Floyd-Warshall Algorithm
+- Bipartite Graph Checking
+- Max Flow (Ford-Fulkerson Algorithm)
+
+#### Question
+- Graph vs Tree
+- Forest (in Tree)
+  - Forest > Graph > Tree > Linked List
+- Operators
+  - Binary Operators
+  - Priority
+  - Infix
+  - Prefix (Polish Notation)
+  - Postfix (Reverse Polish Notation)
+- General
+  - How Does Logarithms Work
+  - File Structure vs Data Structure
+  - Where Is the DS Used?
+  - Void vs Null
+  - Dynamic Data Structure
+    - Uses
+    - Example
+    - Dynamic Memory Management/Allocations
+    - Heap Be Used Over a Stack
+  - Data Abstraction
+  - Post Fix Expression
+  - Signed Number
+  - Pointers in DS
+    - Uses
+  - Huffman’s Algorithm Working
+  - What Is Recursive Algorithm
+  - Divide and Conquer on Recursion
+  - Which Is the Fastest Sorting Algorithm Available?
+  - Multi Linked
+  - Sparse Matrices
+  - Disadvantages of Implementing Queues Using Arrays
+  - Void Pointer
+  - Lexical Analysis
+  - Lexeme
+  - Pattern
