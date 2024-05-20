@@ -4,24 +4,47 @@
  * @param {Array} arr - The array to be sorted.
  * @return {undefined} This function does not return a value.
  * 
- * Big Oh - O(n^2)
+ * Big Oh - O(n^2) - worst case and average case
+ * 
+ * Best Case = O(n) - when array is already sorted
+ * Worst Case = O(n^2) - when array is reverse sorted
+ * Average Case = O(n^2) - when array is partially sorted
  * 
  */
-const bubbleSort = (arr) => {
+const bubbleSort = (array) => {
   let swapped;
-
+  console.log(`Initial Array: ${array}`);
   do {
     for (let i = 0; i < array.length - 1; i++) {
       swapped = false;
+      console.log('Before swap');
+      console.log(i,swapped, array)
       if (array[i] > array[i + 1]) {
         let temp = array[i];
         array[i] = array[i + 1];
         array[i + 1] = temp;
         swapped = true;
       }
+      console.log('After swap');
+      console.log(i,swapped, array)
     }
+    console.log( '\n' + swapped, array + '\n')
   } while (swapped);
 };
+
+let unsortedArray = [5, 3, 7, 1, 9, 8, 2, 4, 6];
+
+bubbleSort(unsortedArray);
+
+console.log(unsortedArray);
+
+/**
+ * Recursive Bubble Sort
+ * 
+ * @param {Array} arr - The array to be sorted. 
+ */
+
+const recursiveBubbleSort = (arr) => {}
 
 
 /**
@@ -33,15 +56,29 @@ const bubbleSort = (arr) => {
 const insertionSort = (arr) => {
   for (let i = 1; i < arr.length; i++) {
     let numberToInsert = arr[i]
+    
+    console.log(`numberToInsert: ${numberToInsert}\n i: ${i}\n arr: ${arr}`);
+    
     let j = i -1 
-
+    
     while(j>=0 && arr[j] > numberToInsert){
+      
       arr[j+1] = arr[j]
       j -= 1
+      console.log(`\nnumberToInsert: ${numberToInsert}\n j: ${j}\n arr: ${arr}\n`);
     }
+    
     arr[j+1] = numberToInsert
   }
 }
+
+/**
+ * Recursive Insertion Sort
+ * 
+ * @param {Array} arr - The array to be sorted. 
+ */
+
+const recursiveInsertionSort = (arr) => {}
 
 /**
  * Sorts an array in descending order using the insertion sort algorithm.
@@ -91,9 +128,9 @@ const selectionSort = (arr) => {
 }
 
 
-const someArray = [10, 5, 3, 8, 2, 20, 100]
-selectionSort(someArray)
-console.log(someArray)
+// const someArray = [5,4,3,2,1]
+// insertionSort(someArray)
+// console.log(someArray)
 
 
 // FIXME: Need to learn quickSort in detail

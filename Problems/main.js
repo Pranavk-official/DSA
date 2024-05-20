@@ -67,3 +67,32 @@ const towerOfHanoi = (n, from, to, using) => {
     towerOfHanoi(n-1,using, to, from)
     console.log(`Move disk ${n} from ${using} to ${to}`);   
 }
+
+/**
+ * 
+ * 121 = 121 % 10 = 1
+ * 12 = 12 % 10 = 2
+ * 1 = 1 % 10 = 1
+ * 
+ * 
+ * 121 % 10 = 121 / 10 = 1
+ */
+
+
+const isPalindromNum = (num) => {
+    let n = num
+
+    let rev = 0
+
+    while(n > 0) {
+        let digit = n % 10
+        n = Math.floor(n/10)
+        rev = rev * 10 + digit
+    }
+
+    return rev === num
+}
+
+console.log(isPalindromNum(121));
+console.log(isPalindromNum(141));
+console.log(isPalindromNum(1412));
