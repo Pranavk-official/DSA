@@ -207,17 +207,26 @@ class BinarySearchTree {
   levelOrder() {
     // Should use the optimized queue implementation
     let queue = [];
+    let list = [];
+
     queue.push(this.root);
+
     while (queue.length) {
-      let current = queue.shift();
-      console.log(current.data);
-      if (current.left) {
-        queue.push(current.left);
+      let val = [];
+      for (let i = 0; i < queue.length; i++) {
+        let current = queue.shift();
+        val.push(current.data);
+        if (current.left) {
+          queue.push(current.left);
+        }
+        if (current.right) {
+          queue.push(current.right);
+        }
       }
-      if (current.right) {
-        queue.push(current.right);
-      }
+      list.push(val);
     }
+
+    console.log(list);
   }
 
   /**
@@ -345,10 +354,10 @@ bst.delete(15);
 bst.delete(7);
 
 bst.levelOrder();
-console.log('\n')
+console.log("\n");
 
-console.log(bst.max(bst.root));
-console.log(bst.min(bst.root));
+console.log(bst.max(), bst.min());
+console.log(bst2.max(), bst2.min());
 
 /**
  * AVL Tree - each node has data and two children
@@ -381,4 +390,3 @@ console.log(bst.min(bst.root));
  * - traversal
  *
  */
-
