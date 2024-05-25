@@ -51,6 +51,7 @@ list.display()
 
 
 const isAnagram = (s, t) => {
+    
     if (s.length !== t.length) {
         return false
     }
@@ -62,7 +63,7 @@ const isAnagram = (s, t) => {
         lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1
     }
 
-    console.log(lookup);
+    // console.log(lookup);
     
     for (let i = 0; i < t.length; i++) {
         const letter = t[i];
@@ -75,7 +76,7 @@ const isAnagram = (s, t) => {
         
     }
     
-    console.log(lookup);
+    // console.log(lookup);
     return true
 }
 
